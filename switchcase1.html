@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan Switch Case</title>
+</head>
+<body>
+    <script>
+        var jawab = prompt("Anda beruntung! Silahkan pilih Doorprize Dengan Memasukan Angka 1 - 6 ");
+        var Doorprize = ""; 
+
+        switch(jawab){
+            case "1":
+                Doorprize = "GADIS";
+                break;
+            case "2":
+                Doorprize = "JANDA";
+                break;
+            case "3":
+                Doorprize = "JANDA ANAK 3";
+                break;
+            case "4":
+                Doorprize = "PERASAAN";
+                break; 
+            case "5":
+                Doorprize = "HATi";
+                break;
+            case "6":
+                Doorprize = " BLACK CARD";
+            default:
+                document.write("<p>Maaf! Pilihan Tidak Ada!</p>");
+        }
+
+        if(Doorprize === ""){
+            document.write("<p>Anda Tidak beruntung kali ini, Coba lagi yuuk</p>");
+        } else {
+            document.write("<h2>Widiihhh..Keren Dapet " + Doorprize + "</h2>");
+        }
+    </script>
+</body>
+</html>
+
