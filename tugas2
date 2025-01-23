@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quiz1</title>
 </head>
 <body>
     <script>
-        for(let i = 0; i <= 100; i++){
-            document.write("<p>nomor : " + i + "</br></p>")
+        let u = 1
+        for(let i = 1; i < 100; i+=2){
+            document.write("<p>Nomor ganjil ke : " + i + "</p>")
+            document.write("<p>Nomor ganjil ke "+ u +" adalah " + i + "</p>");
+            u++;
         }
     </script>
 </body>
+</html>
 </html>
 
