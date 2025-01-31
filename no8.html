@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diskon Belanja</title>
+</head>
+<body>
+    <h2>Hitung Diskon Berdasarkan Total Belanja</h2>
+    <label for="belanja">Masukkan total belanja: </label>
+    <input type="number" id="belanja" placeholder="Total Belanja">
+    <button onclick="hitungDiskon()">Hitung Diskon</button>
+    <p id="result_diskon"></p>
+
+    <script>
+        function hitungDiskon() {
+            let belanja = parseFloat(document.getElementById("belanja").value);
+            let diskon = 0;
+
+            if (belanja > 1500000) {
+                diskon = belanja * 0.15;
+            } else if (belanja > 500000) {
+                diskon = belanja * 0.10;
+            }
+
+            let totalSetelahDiskon = belanja - diskon;
+            document.getElementById("result_diskon").innerText = `Total belanja: Rp. ${belanja} | Diskon: Rp. ${diskon} | Total setelah diskon: Rp. ${totalSetelahDiskon}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+no10.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Angka Positif, Negatif, atau Nol</title>
+</head>
+<body>
+    <h2>Cek Angka Positif, Negatif, atau Nol</h2>
+    <label for="angka">Masukkan angka: </label>
+    <input type="number" id="angka" placeholder="Masukkan angka">
+    <button onclick="cekAngka()">Cek</button>
+    <p id="result_angka"></p>
+
+    <script>
+        function cekAngka() {
+            let angka = parseFloat(document.getElementById("angka").value);
+            let result = "";
+
+            if (angka > 0) {
+                result = `${angka} adalah angka positif.`;
+            } else if (angka < 0) {
+                result = `${angka} adalah angka negatif.`;
+            } else {
+                result = `${angka} adalah nol.`;
+            }
+
+            document.getElementById("result_angka").innerText = result;
+        }
+    </script>
+</body>
+</html>
